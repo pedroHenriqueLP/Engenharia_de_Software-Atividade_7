@@ -109,8 +109,8 @@ public class App {
 
                 switch (opcao) {
                     case 1:
-                        garagem.interagir_Portao(scanner);
-                        limpar_Tela();
+                        limpar_Tela();    
+                        garagem.interagir_Portao();
                         break;
 
                     case 2:
@@ -132,26 +132,7 @@ public class App {
         }
     }
 
-    public static void mostrar_Inquilinos() {
-        if (inquilinos.isEmpty()) {
-            System.out.println("Nenhum inquilino cadastrado.");
-        } else {
-            System.out.println("Lista de inquilinos cadastrados:");
-            for (Pessoa inquilino : inquilinos) {
-                System.out.println("Nome: " + inquilino.getNome());
-                System.out.println("CPF: " + inquilino.getCpf());
-                System.out.println("Número do Apartamento: " + inquilino.getN_apartamento());
-                System.out.println("Quantidade de Veículos: " + inquilino.getQtd_veiculos());
-                System.out.println("Gênero: " + inquilino.getGenero());
-                System.out.println("---------------------------------------");
-            }
-        }
-    }
-
     public static void main(String[] args) throws Exception {
-
-        Pessoa porteiro = new Pessoa("Pedro", "16060618600", 0, 0, "M");
-        inquilinos.add(porteiro);
 
         Scanner scanner = new Scanner(System.in);
 
@@ -163,8 +144,7 @@ public class App {
             System.out.println("1. Cadastrar Inquilino");
             System.out.println("2. Login - Inquilinos");
             System.out.println("3. Login - ADM");
-            System.out.println("4. Sair");
-            System.out.println("5. [PARA TESTES] Listar Inquilinos");
+            System.out.println("4. Fechar");
 
             int opcao = scanner.nextInt();
             scanner.nextLine();
@@ -191,12 +171,6 @@ public class App {
                 case 4:
                     System.out.println("Encerrando o sistema. Obrigado!");
                     running = false;
-                    break;
-
-                case 5:
-                    limpar_Tela();
-                    System.out.println("Você escolheu listar inquilinos:\n");
-                    mostrar_Inquilinos();
                     break;
 
                 default:

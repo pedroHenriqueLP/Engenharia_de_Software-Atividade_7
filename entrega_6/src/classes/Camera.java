@@ -7,8 +7,7 @@ public class Camera {
     public void exibir_Filmagem(Scanner scanner) {
         System.out.println("Insira a data para exibir a filmagem (DD/MM/AAAA):");
         String data = scanner.next();
-        System.out
-                .println("Exibindo filmagem do dia " + data + ". Pressione Enter para parar e voltar ao menu de ADM.");
+        System.out.println("Exibindo filmagem do dia " + data + ". Pressione Enter para parar e voltar ao menu de ADM.");
         scanner.nextLine();
         scanner.nextLine();
     }

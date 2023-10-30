@@ -7,7 +7,6 @@ public class Vagas {
     public Vagas(int numero, boolean estado) {
         this.numero = numero;
         this.estado = estado;
-
     }
 
     public int getNumero() {

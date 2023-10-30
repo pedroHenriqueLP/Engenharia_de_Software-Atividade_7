@@ -1,7 +1,5 @@
 package classes;
 
-import java.util.Scanner;
-
 public class Garagem {
     private boolean estado;
     private int qtd_vagas;
@@ -13,17 +11,13 @@ public class Garagem {
         this.qtd_vagas_ocupadas = qtd_vagas_ocupadas;
     }
 
-    public void interagir_Portao(Scanner scanner) {
+    public void interagir_Portao() {
         if (this.estado) {
-            System.out.println("O portão foi fechado. Pressione Enter para voltar para o Menu.");
+            System.out.println("O portão foi fechado.\n");
             this.estado = false;
-            scanner.nextLine();
-            scanner.nextLine();
         } else {
-            System.out.println("O portão foi aberto. Pressione Enter para voltar para o Menu.");
+            System.out.println("O portão foi aberto.\n");
             this.estado = true;
-            scanner.nextLine();
-            scanner.nextLine();
         }
     }
 
